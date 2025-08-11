@@ -4,8 +4,8 @@
 $nome = "Enzo Enrico";
 
 echo "Boa tarde!";
-$nota1 =  readline("Digite a 1° nota do aluno: ");
-$nota2 =  readline("Digite a 2° nota do aluno: ");
+$nota1 =  readline("Digite a 1° nota do aluno: "); // Primeira nota do aluno
+$nota2 =  readline("Digite a 2° nota do aluno: "); // Segunda nota do aluno
 $presenca =  readline("Digite a presença do aluno: "); // Presença em porcentagem
 $media = ($nota1 + $nota2) / 2;
 

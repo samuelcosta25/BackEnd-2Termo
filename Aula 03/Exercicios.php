@@ -3,7 +3,7 @@
 
 ## **1. Verificação de Idade**
 
-
+// Para tornar alguma frase em comentário: Ctrl + ;
 
 $idade = (int) readline("Digite sua idade: ");
 

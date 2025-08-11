@@ -1,0 +1,8 @@
+Exercício extra:
+
+Faça um algoritmo que leia 2 valores digitados pelo usuário e interprete
+o tipo de variável que foi digitado. Caso os TIPOS sejam iguais, 
+a seguinte mensagem deve ser exibida: "Variáveis de tipos iguais! Primeiro valor do tipo [type] e segundo valor do tipo [type]". Caso não, a seguinte mensagem: "ERRO! Variáveis de tipos diferentes. Primeiro valor do tipo [type] e segundo valor do tipo [type]"
+
+Como a função de extrair o tipo da variável ainda não foi ensinada, o
+aluno deve pesquisar (SEM INTELIGENCIA ARTIFICIAL) como fazer isso.
