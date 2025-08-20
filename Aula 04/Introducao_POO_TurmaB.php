@@ -1,42 +1,44 @@
 <?php
-// Modelagem de dados sem a utilização de POO (Programação orientada a objetos)
-
-$marca_carro1="Honda";
-$modelo_carro1="Civic";
-$ano_carro1=2016;
+//Modelagem de dados sem POO
+$modelo_carro1="Versa";
+$marca_carro1="Nissan";
+$ano_carro1=2020;
 $revisao_carro1=true;
 $Ndonos_carro1=2;
 
+$modelo_carro2="M5";
 $marca_carro2="BMW";
-$modelo_carro2="320i";
-$ano_carro2=2012;
+$ano_carro2=2018;
 $revisao_carro2=false;
-$Ndonos_carro2=3;
+$Ndonos_carro2=2;
 
-
-$marca_carro3="Fiat";
-$modelo_carro3="Uno";
-$ano_carro3=2005;
+$modelo_carro3="911";
+$marca_carro3="Porsche";
+$ano_carro3=2026;
 $revisao_carro3=false;
 $Ndonos_carro3=1;
 
-$marca_carro4="Volkswagen";
-$modelo_carro4="Jetta";
-$ano_carro4=2020;
+$modelo_carro4="Dolphin";
+$marca_carro4="BYD";
+$ano_carro4=2023;
 $revisao_carro4=true;
-$Ndonos_carro4=7;
+$Ndonos_carro4=1;
 
-function revisaoFeita($rev){
-    $rev=true;
-    return $rev;
+
+
+function passouRevisao ($revisaoF){
+    $revisaoF=false;
+    return $revisaoF;
 }
 
-$revisao_carro3 = revisaoFeita($revisao_carro3); // Resultado True
+$revisao_carro4 = passouRevisao( $revisao_carro4);
 
-
-function novoDono($qtde_donos){
-    return $qtde_donos+1;
+function novoDono($donos){
+    return $donos + 1;
 }
 
-$Ndonos_carro4 = novoDono($Ndonos_carro4);
+$Ndonos_carro4 = novoDono($Ndonos_carro4 );
+
+
+
 ?>
