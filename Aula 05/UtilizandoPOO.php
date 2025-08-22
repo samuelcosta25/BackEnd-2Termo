@@ -26,6 +26,8 @@ class Carro { // Criando classe (molde para criação de objetos)
     }
 }
 
+
+// Criando novos objeto utilizando a classe Carro
 $carro1 = new Carro("Porsche", "911", 2020, false, 3); // Criando objeto 1
 $carro2 = new Carro("Mitsubishi", "Lancer", 1945, true, 1); // Criando objeto 2
 
@@ -34,5 +36,8 @@ $carro3 = new Carro ("Chevrolet", "Impala", 1967, true, 2);// Criando objeto 3
 $carro4 = new Carro ("Ford", "Mustang", 1970, false, 6);// Criando objeto 4
 $carro5 = new Carro ("Mazda", "RX8", 2005, true, 2);// Criando objeto 5
 $carro6 = new Carro ("CAOA Cherry", "Tiggo", "2022", true, 1);// Criando objeto 6
+ 
+$carro2 -> ligar(); // Chamando metodo para ligar carro 2
+$carro4 -> exibirInfo(); // Chamando meteodo para exibir informações do carro 4
 
 ?>
