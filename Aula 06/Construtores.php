@@ -16,7 +16,7 @@ class ProdutosMercado{ // Criando classe
     public function __construct($nome, $categoria, $fornecedor, $qtde_estoque){
         $this-> nome = $nome;
         $this-> categoria = $categoria;
-        $this-> fornecedor= $fornecedor;
+        $this-> fornecedor = $fornecedor;
         $this-> qtde_estoque = $qtde_estoque;
     }
 }
@@ -37,4 +37,5 @@ class ProdutosMercado{ // Criando classe
 
 // Criando objetos com construtor feito
 $produto1 = new ProdutosMercado ("Suco Tang", "Bebidas", "Mondelez", 200);
+
 $produto2 = new ProdutosMercado ("Energético Monster", "Bebidas", "Coca-Cola", 150);
