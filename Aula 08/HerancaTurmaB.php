@@ -8,7 +8,7 @@
     public function __construct($categoria, $n_comodos, $valor, $estado_conservacao){
         $this->$categoria=$categoria;
         $this->n_comodos=$n_comodos;
-        $this->valor-$valor;
+        $this->valor=$valor;
         $this->estado_conservacao=$estado_conservacao;
     }
  }
