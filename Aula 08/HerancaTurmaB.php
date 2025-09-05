@@ -34,4 +34,23 @@
  }
 
  // Crie uma subclasse chamada Escola com o atributo $seguimento.
+    class Escola extends Imovel {
+        private $seguimento;
+
+        public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $seguimento){
+            parent::__construct($categoria, $n_comodos, $valor, $estado_conservacao);
+
+             $this->seguimento= $seguimento;
+        }
+    }
+ // Crie uma classe filha chamada comercio com o atributo $tamanho
+ class Comercio extends Imovel {
+    private $tamanho;
+
+    public function __construct($categoria, $n_comodos, $valor, $estado_conservacao, $tamanho){
+        parent::__construct($categoria, $n_comodos, $valor, $estado_conservacao);
+
+        $this->tamanho=$tamanho;
+    }
+ }
   
