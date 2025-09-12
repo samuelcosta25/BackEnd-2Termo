@@ -60,9 +60,6 @@ $din = new DinheiroEspecie();
 $p->pagar(65);
 $din->pagar(320);
 
-
-
-
 // 1. Criando uma interface simples
 
 // Crie uma interface chamada Forma que obrigue qualquer classe a ter um método calcularArea().
@@ -71,21 +68,19 @@ $din->pagar(320);
 // Area quadrado = l * l
 // Area Circulo =  π * r²
 
-
-
 interface Forma {
-    public function CalcularArea($valor, $valor2);
+    public function CalcularArea($valor);
 }
 // Quadrado deve receber o lado e calcular a área.
 class Quadrado implements Forma{
-    public function CalcularArea($lado, $a){
+    public function CalcularArea($lado){
         $area = $lado*$lado;
         return $area;
     }
 }
 // Circulo deve receber o raio e calcular a área.
 class Circulo implements Forma {
-    public function CalcularArea($raio, $a){
+    public function CalcularArea($raio){
         $area = pi()*($raio*$raio);
         return $area;
     }
@@ -98,34 +93,25 @@ echo "\nÁrea do Quadrado: ".$square->CalcularArea(readline("\nDigite a medida d
 echo "\nÁrea do Círculo: ".$circle->CalcularArea(readline("\nDigite a medida do raio do círculo: "), 0);
 
 // Crie a classe Pentagono, e calcule a área do mesmo.
+class Pentagono implements Forma{
+    public $apotema;
 
-// Crie a classe hexagono, e calcule a área do mesmo.
-
-
-
-echo number_format(3.14159265, 2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Pentagono implements Forma {
-    public function CalcularArea($lado, $apotema){
-        $area = (($lado*5)*$apotema)/2;
+    public function CalcularArea($lado){
+        $area = (($lado*5)*$this->apotema)/2;
+        return $area;
     }
 }
 
 $pent = new Pentagono();
+$pent->apotema = 5;
+
+$pent->CalcularArea(4);
+
+
+// Crie a classe hexagono, e calcule a área do mesmo.
+
+
+echo number_format(3.14159265, 2);
+
 
 echo "\nÁrea do Pentágono: ".$pent->CalcularArea(readline("\nDigite a medida do lado do pentágono: "), readline("\nDigite a medida da apotema do pentágono: "));
