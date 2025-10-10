@@ -5,7 +5,7 @@
 // fazer treinamentos especiais no Cotil e, depois, irão ao shopping para doar
 // brinquedos às crianças.
 
-<?php
+
 class Heroi {
     public function treinar(LocalDeTreinamento $local) {
         echo "O herói está treinando em " . $local->getNome() . "<br>";

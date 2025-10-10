@@ -4,7 +4,7 @@
 // "Um sistema de cinema deve permitir que clientes comprem ingressos para
 // sessões de filmes."
 
-<?php
+
 class SistemaDeCinema {
     public function exibirSessoes() {
         echo "Exibindo todas as sessões disponíveis.<br>";

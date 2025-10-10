@@ -4,7 +4,7 @@
 // Um grupo de turistas vai visitar o Japão, o Brasil e o Acre. Em cada lugar da
 // Terra, eles poderão comer comidas típicas e nadar em rios ou praias.
 
-<?php
+
 class Turista {
     public function visitar(Localidade $localidade) {
         echo "O turista está visitando " . $localidade->getNome() . "<br>";

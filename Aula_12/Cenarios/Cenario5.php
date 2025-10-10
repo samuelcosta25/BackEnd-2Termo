@@ -4,7 +4,7 @@
 // "Um sistema de biblioteca deve permitir que usuários (alunos e professores)
 // façam empréstimos de livros e revistas."
 
-<?php
+
 class SistemaDeBiblioteca {
     public function registrarEmprestimo(Emprestimo $emprestimo) {
         echo "Empréstimo registrado com sucesso.<br>";

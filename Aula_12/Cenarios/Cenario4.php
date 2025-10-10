@@ -4,7 +4,7 @@
 // Na Terra, pessoas podem engravidar, nascer, crescer, fazer escolhas e até doar
 // sangue para ajudar outras.
 
-<?php
+
 class Pessoa {
     public function engravidar() {
         echo "Uma pessoa engravidou.<br>";

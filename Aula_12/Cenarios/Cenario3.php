@@ -5,7 +5,7 @@
 // caminho, começa a chover, e eles precisam amar uns aos outros para superar as
 // dificuldades. No fim da jornada, eles celebram ao comer juntos.
 
-<?php
+
 class Personagem {
     public function seguirJornada(Jornada $jornada) {
         $jornada->avancar();
