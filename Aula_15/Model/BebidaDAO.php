@@ -36,8 +36,9 @@ class BebidaDAO {
                     'qtde'=>$bebida->getQtde()
                 ];
             }
-            file_put_contents($this->arquivoJson, json_encode($dadosParaSalvar, JSON_PRETTY_PRINT));
+            file_put_contents($this->arquivoJson, json_encode($dadosParaSalvar, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
         }
+
 
         // CREATE
         public function criarBebida(Bebida $bebida){
@@ -51,11 +52,16 @@ class BebidaDAO {
         }
         
         // UPDATE 
-        public function atualizarBebida($nome, $novoValor, $novaQtde){
-            if(isset($this->bebidasArray[$nome])){
-                $this->bebidasArray[$nome]->setValor($novoValor);
-                $this->bebidasArray[$nome]->setQtde($novaQtde);
+        public function atualizarBebida($nomeOriginal, $novoNome, $categoria, $volume, $valor, $qtde) {
+            if (!isset($this->bebidasArray[$nomeOriginal])) return; // não existe
+
+            // Se mudar o nome e ele já existir, não deixa
+            if ($nomeOriginal !== $novoNome && isset($this->bebidasArray[$novoNome])) {
+            return;
             }
+            // Exclui o objeto antigo para gravar um novo com os mesmos dados
+            unset($this->bebidasArray[$nomeOriginal]);
+            $this->bebidasArray[$novoNome] = new Bebida($novoNome, $categoria, $volume, $valor, $qtde);
             $this->salvarArquivo();
         }
 
@@ -64,5 +70,9 @@ class BebidaDAO {
             unset($this->bebidasArray[$nome]);
             $this->salvarArquivo();
         }
+
+        public function buscarPorNome($nome) {
+        return $this->bebidasArray[$nome] ?? null;
+    }
     
 }
