@@ -44,6 +44,7 @@ class BebidaDAO {
         public function criarBebida(Bebida $bebida){
             $this->bebidasArray[$bebida->getNome()] = $bebida;
             $this->salvarArquivo();
+                
         }
 
         //READ
